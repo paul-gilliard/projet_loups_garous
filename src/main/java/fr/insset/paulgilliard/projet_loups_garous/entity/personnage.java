@@ -6,7 +6,8 @@
 package fr.insset.paulgilliard.projet_loups_garous.entity;
 
 import java.io.Serializable;
-import javax.persistence.Column;
+import java.util.List;
+import javax.persistence.JoinColumn;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -61,17 +62,17 @@ public class personnage implements Serializable {
     
     private String nom;
     
-    @Column
+    @JoinColumn
     @ManyToMany
-    private phase parole;
+    private List<phase> listDeParole;
     
-    @Column
+    @JoinColumn
     @ManyToMany
-    private phase ecoute;
+    private List<phase> listDeEcoute;
     
-    @Column
+    @JoinColumn
     @ManyToMany
-    private phase vote;
+    private List<phase> listDeVote;
 
     public String getNom() {
         return nom;
@@ -81,29 +82,31 @@ public class personnage implements Serializable {
         this.nom = nom;
     }
 
-    public phase getParole() {
-        return parole;
+    public List<phase> getListDeParole() {
+        return listDeParole;
     }
 
-    public void setParole(phase parole) {
-        this.parole = parole;
+    public void setListDeParole(List<phase> listDeParole) {
+        this.listDeParole = listDeParole;
     }
 
-    public phase getEcoute() {
-        return ecoute;
+    public List<phase> getListDeEcoute() {
+        return listDeEcoute;
     }
 
-    public void setEcoute(phase ecoute) {
-        this.ecoute = ecoute;
+    public void setListDeEcoute(List<phase> listDeEcoute) {
+        this.listDeEcoute = listDeEcoute;
     }
 
-    public phase getVote() {
-        return vote;
+    public List<phase> getListDeVote() {
+        return listDeVote;
     }
 
-    public void setVote(phase vote) {
-        this.vote = vote;
+    public void setListDeVote(List<phase> listDeVote) {
+        this.listDeVote = listDeVote;
     }
+
+
     
     
     
