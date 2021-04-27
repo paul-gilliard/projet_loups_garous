@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewParticipationTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewParticipationLabel_id}"/>
+                    <h:outputText value="#{participationController.selected.id}" title="#{bundle.ViewParticipationTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewParticipationLabel_personnage}"/>
+                    <h:outputText value="#{participationController.selected.personnage}" title="#{bundle.ViewParticipationTitle_personnage}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{participationController.destroyAndView}" value="#{bundle.ViewParticipationDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewParticipationEditLink}"/>
+                <br />
+                <h:commandLink action="#{participationController.prepareCreate}" value="#{bundle.ViewParticipationCreateLink}" />
+                <br />
+                <h:commandLink action="#{participationController.prepareList}" value="#{bundle.ViewParticipationShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewParticipationIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

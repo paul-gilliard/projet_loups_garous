@@ -3,12 +3,12 @@
   <!-- Define Persistence Unit -->
   <persistence-unit name="my_persistence_unit" transaction-type="JTA">
     <jta-data-source>jdbc/__default</jta-data-source>
-    <class>fr.insset.paulgilliard.projet_loups_garous.entity.joueur</class>
-    <class>fr.insset.paulgilliard.projet_loups_garous.entity.participation</class>
-    <class>fr.insset.paulgilliard.projet_loups_garous.entity.personnage</class>
-    <class>fr.insset.paulgilliard.projet_loups_garous.entity.partie</class>
-    <class>fr.insset.paulgilliard.projet_loups_garous.entity.phase</class>
- <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <class>fr.insset.paulgilliard.projet_loups_garous.entity.Joueur</class>
+    <class>fr.insset.paulgilliard.projet_loups_garous.entity.Participation</class>
+    <class>fr.insset.paulgilliard.projet_loups_garous.entity.Partie</class>
+    <class>fr.insset.paulgilliard.projet_loups_garous.entity.Personnage</class>
+    <class>fr.insset.paulgilliard.projet_loups_garous.entity.Phase</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
     </properties>
