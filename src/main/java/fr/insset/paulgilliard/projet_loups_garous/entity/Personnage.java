@@ -58,7 +58,7 @@ public class Personnage implements Serializable {
 
     @Override
     public String toString() {
-        return "fr.insset.paulgilliard.projet_loups_garous.entity.personnage[ id=" + id + " ]";
+        return nom;
     }
     
     private String nom;

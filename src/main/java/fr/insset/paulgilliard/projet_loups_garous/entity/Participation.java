@@ -54,7 +54,7 @@ public class Participation implements Serializable {
 
     @Override
     public String toString() {
-        return "fr.insset.paulgilliard.projet_loups_garous.entity.participation[ id=" + id + " ]";
+        return personnage.getNom();
     }
     
     public Personnage getPersonnage() {
